@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAddressActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightYellow"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/home1"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:tint="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City*"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <EditText
+                android:id="@+id/locality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Locality,area or street*"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:isScrollContainer="true"
+                android:ems="10"
+                android:lines="2"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/flat_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Flat no. or Building name*"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:isScrollContainer="true"
+                android:ems="10"
+                android:lines="2"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_city"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@color/black"
+                    android:padding="12dp"
+                    android:layout_weight="1"
+                    android:hint="Pincode*"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/state_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_city"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:hint="Landmark(Optional)"
+                android:inputType="textPersonName"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_height="2dp"
+                android:background="@color/white"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Name*"
+                android:drawableStart="@drawable/ic_action_person"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:inputType="textPersonName"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Mobile no.*"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_action_phone"
+                android:drawablePadding="8dp"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:maxLength="10"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/alternate_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_action_phone"
+                android:drawablePadding="8dp"
+                android:maxLength="10"
+                android:backgroundTint="@color/black"
+                android:padding="12dp"
+                android:hint="Alternate mobile no. (optional)"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="save"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

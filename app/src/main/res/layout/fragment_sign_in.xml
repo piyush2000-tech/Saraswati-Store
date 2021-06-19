@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightYellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignInFragment">
+
+    <TextView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:background="@drawable/ic_close_icon"
+        android:backgroundTint="@color/black"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="0dp"
+        app:civ_border_color="@color/black"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        android:src="@drawable/avon_logo_21" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/successGreen"
+        android:src="@drawable/avon_logo_21"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_action_email"
+        android:drawablePadding="8dp"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:textColorHint="@color/gray_8ba6c1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/design_default_color_primary">
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_action_password"
+        android:drawablePadding="8dp"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_8ba6c1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="58sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="serif"
+        android:padding="12dp"
+        android:text="Sign In"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Ortxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:padding="2dp"
+        android:text="Or"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/dividerRight"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@id/Ortxt"
+        android:background="?android:attr/listDivider"
+        android:foreground="@color/black"
+        android:padding="4dp" />
+
+    <View
+        android:id="@+id/dividerLeft"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toLeftOf="@id/Ortxt"
+        android:background="?android:attr/listDivider"
+        android:foreground="@color/black"
+        android:padding="4dp" />
+
+    <!--android:backgroundTint="#EB3798E4"-->
+    <com.google.android.gms.common.internal.SignInButtonImpl
+        android:id="@+id/btnSignInGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="serif"
+        android:padding="12dp"
+        android:text="Sign In With Google"
+        android:textAlignment="gravity"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <!--<com.google.android.gms.common.SignInButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSignInGoogle"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:text="Sign In With Google"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="#EB3798E4"
+        android:layout_below="@id/btnSignIn"/>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSignInGoogle"
+        android:text="Sign In With Google"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round"
+        android:backgroundTint="#EB3798E4"
+        android:layout_below="@id/btnSignIn"/>!-->
+
+    <TextView
+        android:id="@+id/forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="8dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:layout_alignParentEnd="true"
+        android:text="Forgot Password"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottAnim"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btnSignInGoogle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="12dp"
+        android:text="Don't have a account? Register Now"
+        android:textColor="@color/redColor"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_privacy"
+        android:orderInCategory="100"
+        android:title="@string/privacy_policy"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:iconTint="@color/black"
+        android:title="@string/share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="always" />
+</menu>
